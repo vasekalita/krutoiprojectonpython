@@ -32,4 +32,6 @@
 
 1. Установите зависимости:
 ```bash
-pip install pyqt6 pymysql
+pip install pyqt6 pymysq
+```
+
