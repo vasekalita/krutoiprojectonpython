@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Admin_Form</class>
+ <widget class="QWidget" name="Admin_Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Окно админа</string>
+  </property>
+  <widget class="QTableWidget" name="request_table">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>290</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>id пользователя</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Имя заявки</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Статус</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Приоритет</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Действие</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
