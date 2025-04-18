@@ -1,0 +1,26 @@
+DELIMITER $$
+
+CREATE TRIGGER track_status_change
+AFTER UPDATE ON request
+FOR EACH ROW
+BEGIN
+    IF NEW.status != OLD.status THEN
+        INSERT INTO history_request (id_req, old_value, new_value)
+        VALUES (OLD.id, OLD.status, NEW.status);
+    END IF;
+END$$
+
+DELIMITER ;
+
+
+DELIMITER $$
+
+CREATE TRIGGER track_request_insert
+AFTER INSERT ON request
+FOR EACH ROW
+BEGIN
+    INSERT INTO history_request (id_req, old_value, new_value)
+    VALUES (NEW.id, NEW.status, NEW.status);
+END$$
+
+DELIMITER ;
